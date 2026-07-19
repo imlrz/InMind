@@ -12,10 +12,10 @@
 </p>
 
 <p align="center">
+  <a href="https://keep-it-inmind.github.io/">Website</a> ·
   <a href="benchmark/dataset/inmind.jsonl">Dataset</a> ·
-  <a href="benchmark/README.md">Benchmark design</a> ·
-  <a href="benchmark/dataset/README.md">Dataset card</a> ·
-  <a href="benchmark/dataset/schema.json">Schema</a>
+  <a href="https://keep-it-inmind.github.io/leaderboard/">Leaderboard</a> ·
+  <strong>Paper: Coming soon</strong>
 </p>
 
 > Most memory benchmarks ask: **Can the agent remember?**
@@ -129,11 +129,11 @@ InMind/
 
 ## Paper
 
-The benchmark accompanies the manuscript:
+**Coming soon.** The benchmark accompanies the manuscript:
 
 > **Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory**
 
-The manuscript formalizes the retrieval hypothesis behind query-conditioned memory, introduces InMind's paired diagnostic controls, and evaluates representative vector, graph, agentic, and hybrid memory systems. The paper PDF, citation metadata, evaluation code, and paper-aligned results will be added after the release artifacts are frozen.
+The manuscript formalizes the retrieval hypothesis behind query-conditioned memory, introduces InMind's paired diagnostic controls, and evaluates representative vector, graph, agentic, and hybrid memory systems.
 
 ## Responsible use
 
