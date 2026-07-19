@@ -1,8 +1,4 @@
-# InMind
-
-<p align="center">
-  <strong>Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory</strong>
-</p>
+# Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory
 
 <p align="center">
   <a href="https://keep-it-inmind.github.io/"><img alt="Website" src="https://img.shields.io/badge/website-project_page-4c78a8"></a>
