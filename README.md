@@ -4,7 +4,7 @@
 
 InMind is a 125-task benchmark for testing whether a long-term-memory agent can apply a previously stated user fact when the later query is only connected to that fact through world knowledge.
 
-This is the initial, data-only repository release. It contains the benchmark definition and English/bilingual datasets. Evaluation code, baseline adapters, paper results, and archival artifacts will be added in later stages.
+This is the initial, data-only repository release. It contains the benchmark definition and English dataset. Evaluation code, baseline adapters, paper results, and archival artifacts will be added in later stages.
 
 ## Motivation
 
@@ -24,7 +24,7 @@ The direct query tests whether the fact can be recalled on demand. The indirect 
 | Property | Value |
 | --- | --- |
 | Tasks | 125 |
-| Languages | English and Chinese |
+| Evaluation language | English |
 | Domains | 10 |
 | User facts | Synthetic |
 | Task structure | Memory turn + direct recall query + indirect application query |
@@ -52,25 +52,22 @@ benchmark/
 ├── README.md
 └── dataset/
     ├── README.md
-    ├── inmind_en.jsonl
-    ├── inmind_bilingual.jsonl
-    ├── schema_en.json
-    ├── schema_bilingual.json
+    ├── inmind.jsonl
+    ├── schema.json
     └── SHA256SUMS
 ```
 
 - [Benchmark documentation](benchmark/README.md)
 - [Dataset card and field definitions](benchmark/dataset/README.md)
-- [English dataset](benchmark/dataset/inmind_en.jsonl)
-- [English–Chinese dataset](benchmark/dataset/inmind_bilingual.jsonl)
+- [English dataset](benchmark/dataset/inmind.jsonl)
 
 ## Quick inspection
 
-Each dataset is JSON Lines, with one task per line.
+The dataset is JSON Lines, with one task per line.
 
 ```bash
-wc -l benchmark/dataset/inmind_en.jsonl
-jq 'select(.task_id == 155)' benchmark/dataset/inmind_en.jsonl
+wc -l benchmark/dataset/inmind.jsonl
+jq 'select(.task_id == 155)' benchmark/dataset/inmind.jsonl
 ```
 
 The first command should report 125 records. Task IDs are intentionally not renumbered because the paper and experiment records refer to the retained IDs directly.
@@ -85,11 +82,9 @@ Knowledge-source metadata is included where it was available in the audited buil
 
 - [x] Benchmark definition
 - [x] English dataset
-- [x] Bilingual dataset
 - [ ] Evaluation package and judge prompts
 - [ ] Baseline adapters and pinned dependency versions
 - [ ] Paper-aligned aggregate and per-task results
 - [ ] Citation metadata and archival release
 
 License and citation metadata will be added before the formal archival release.
-

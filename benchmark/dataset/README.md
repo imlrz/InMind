@@ -4,13 +4,11 @@
 
 | File | Records | Description |
 | --- | ---: | --- |
-| `inmind_en.jsonl` | 125 | Flat English evaluation records |
-| `inmind_bilingual.jsonl` | 125 | Canonical English–Chinese records with shared metadata |
-| `schema_en.json` | — | JSON Schema for one English JSONL record |
-| `schema_bilingual.json` | — | JSON Schema for one bilingual JSONL record |
-| `SHA256SUMS` | — | Checksums for the two dataset files |
+| `inmind.jsonl` | 125 | English evaluation records |
+| `schema.json` | — | JSON Schema for one dataset record |
+| `SHA256SUMS` | — | Checksum for the dataset file |
 
-Both JSONL files are ordered by `task_id` and describe the same 125 tasks.
+The JSONL file is ordered by `task_id` and contains 125 English-language tasks. Chinese text produced during dataset development was a translation artifact and is not part of the benchmark release.
 
 ## English record
 
@@ -50,8 +48,6 @@ Both JSONL files are ordered by `task_id` and describe the same 125 tasks.
 | `query` | string | Indirect application query |
 | `provenance` | object | Build origin and optional knowledge-source trace |
 
-The bilingual file moves all language-dependent fields under `en` and `zh`. Shared fields (`task_id`, `domain`, and `provenance`) remain at the top level.
-
 ## Stable identifiers
 
 Task IDs are not contiguous: the release retains 125 IDs between 0 and 225. Do not rewrite them as row numbers. Use `task_id` for joins with future per-task results.
@@ -78,7 +74,7 @@ Python:
 import json
 from pathlib import Path
 
-path = Path("benchmark/dataset/inmind_en.jsonl")
+path = Path("benchmark/dataset/inmind.jsonl")
 tasks = [json.loads(line) for line in path.read_text().splitlines() if line]
 by_id = {task["task_id"]: task for task in tasks}
 
@@ -89,7 +85,7 @@ print(by_id[155]["query"])
 Command line:
 
 ```bash
-jq -c 'select(.domain == "legal")' benchmark/dataset/inmind_en.jsonl
+jq -c 'select(.domain == "legal")' benchmark/dataset/inmind.jsonl
 sha256sum -c benchmark/dataset/SHA256SUMS
 ```
 
