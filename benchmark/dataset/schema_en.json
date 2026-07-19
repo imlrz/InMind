@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/imlrz/InMind/main/benchmark/dataset/schema_en.json",
+  "title": "InMind English task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "domain",
+    "legacy_type",
+    "entity_1",
+    "entity_2",
+    "relation",
+    "explanation",
+    "user_message",
+    "assistant_message",
+    "naive_query",
+    "query",
+    "provenance"
+  ],
+  "properties": {
+    "task_id": { "type": "integer", "minimum": 0 },
+    "domain": { "$ref": "#/$defs/domain" },
+    "legacy_type": { "type": ["string", "null"] },
+    "entity_1": { "type": ["string", "null"] },
+    "entity_2": { "type": ["string", "null"] },
+    "relation": { "type": ["string", "null"] },
+    "explanation": { "type": "string", "minLength": 1 },
+    "user_message": { "type": "string", "minLength": 1 },
+    "assistant_message": { "type": "string", "minLength": 1 },
+    "naive_query": { "type": "string", "minLength": 1 },
+    "query": { "type": "string", "minLength": 1 },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "domain": {
+      "type": "string",
+      "enum": [
+        "consumer",
+        "financial",
+        "health_and_wellness",
+        "legal",
+        "other",
+        "parenting",
+        "personal_development",
+        "professional_and_career",
+        "relationships",
+        "spirituality"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_dataset", "source_task_id", "original_task_id"],
+      "properties": {
+        "source_dataset": { "type": "string" },
+        "source_task_id": { "type": "integer", "minimum": 0 },
+        "original_task_id": { "type": "integer", "minimum": 0 },
+        "generation_batch": { "type": "string" },
+        "generation_model": { "type": "string" },
+        "annotation_status": { "type": "string" },
+        "knowledge_source": { "$ref": "#/$defs/knowledge_source" }
+      }
+    },
+    "knowledge_source": {
+      "type": "object",
+      "properties": {
+        "source_type": { "type": "string" },
+        "source_id": { "type": "string" },
+        "source_name": { "type": "string" },
+        "dataset_or_page": { "type": "string" },
+        "url": { "type": "string" },
+        "retrieval_url": { "type": "string" },
+        "chunk_id": { "type": "string" },
+        "chunk_uid": { "type": "string" },
+        "chunk_index": { "type": ["integer", "string"] },
+        "chunk_kind": { "type": "string" },
+        "char_start": { "type": ["integer", "string"] },
+        "char_end": { "type": ["integer", "string"] },
+        "workflow": { "type": "string" },
+        "database_scope": { "type": "string" },
+        "original_dataset_name": { "type": "string" }
+      }
+    }
+  }
+}
