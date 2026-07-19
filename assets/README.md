@@ -6,6 +6,6 @@ These figures are exported from the InMind manuscript and are included here to e
 | --- | --- |
 | `implicit_association_example.png` | Motivating tree-nut-allergy/macaron failure case |
 | `benchmark_taxonomy.png` | Comparison with explicit recall, state aggregation, and conversational multi-hop tasks |
-| `similarity_comparison.png` | Target-versus-background similarity distributions under all-MiniLM-L6-v2 |
+| `similarity_comparison.png` | Target-versus-background similarity distributions under BGE-small-en-v1.5 |
 
 The manuscript remains the canonical source for figure captions, experimental setup, and interpretation.
