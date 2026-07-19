@@ -4,11 +4,10 @@
   "title": "InMind bilingual task",
   "type": "object",
   "additionalProperties": false,
-  "required": ["task_id", "domain", "legacy_type", "en", "zh", "provenance"],
+  "required": ["task_id", "domain", "en", "zh", "provenance"],
   "properties": {
     "task_id": { "type": "integer", "minimum": 0 },
     "domain": { "$ref": "schema_en.json#/$defs/domain" },
-    "legacy_type": { "type": ["string", "null"] },
     "en": { "$ref": "#/$defs/language_record" },
     "zh": { "$ref": "#/$defs/language_record" },
     "provenance": { "$ref": "schema_en.json#/$defs/provenance" }

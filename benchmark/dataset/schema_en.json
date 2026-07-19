@@ -7,7 +7,6 @@
   "required": [
     "task_id",
     "domain",
-    "legacy_type",
     "entity_1",
     "entity_2",
     "relation",
@@ -21,7 +20,6 @@
   "properties": {
     "task_id": { "type": "integer", "minimum": 0 },
     "domain": { "$ref": "#/$defs/domain" },
-    "legacy_type": { "type": ["string", "null"] },
     "entity_1": { "type": ["string", "null"] },
     "entity_2": { "type": ["string", "null"] },
     "relation": { "type": ["string", "null"] },
