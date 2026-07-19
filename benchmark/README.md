@@ -25,7 +25,7 @@ Every task contains:
 | `explanation` | The expected application and knowledge bridge used for evaluation |
 | `entity_1`, `entity_2`, `relation` | Optional structured representation of the bridge |
 
-The structured bridge fields are absent for some legacy tasks; `explanation` is present for all 125 tasks.
+The structured bridge fields are absent for some tasks retained from the original 90-task set; `explanation` is present for all 125 tasks.
 
 ## Evaluation axes
 
@@ -76,8 +76,7 @@ It is not intended as a knowledge base, a source of professional advice, or a be
 - The benchmark has 125 tasks, so small percentage differences should not be over-interpreted.
 - Health, wellness, and safety scenarios are intentionally prominent.
 - Some bridges are jurisdiction- or context-dependent in real deployments even when the benchmark expectation is binary.
-- The current public provenance metadata is incomplete for legacy and human-curated tasks.
+- The current public provenance metadata is incomplete for tasks retained from the original 90-task set and for human-curated tasks.
 - A system optimized only for positive reminders could over-warn; this release does not yet include matched negative controls.
 
 See [dataset/README.md](dataset/README.md) for file formats and provenance coverage.
-

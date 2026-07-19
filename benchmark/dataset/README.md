@@ -18,7 +18,6 @@ Both JSONL files are ordered by `task_id` and describe the same 125 tasks.
 {
   "task_id": 155,
   "domain": "health_and_wellness",
-  "legacy_type": "personal/allergy",
   "entity_1": null,
   "entity_2": null,
   "relation": null,
@@ -41,7 +40,6 @@ Both JSONL files are ordered by `task_id` and describe the same 125 tasks.
 | --- | --- | --- |
 | `task_id` | integer | Stable, sparse task identifier used by the paper |
 | `domain` | string | One of the ten benchmark domains |
-| `legacy_type` | string or null | Earlier fine-grained category, when available |
 | `entity_1` | string or null | First entity in the structured bridge |
 | `entity_2` | string or null | Second entity in the structured bridge |
 | `relation` | string or null | Relation connecting the entities |
@@ -52,7 +50,7 @@ Both JSONL files are ordered by `task_id` and describe the same 125 tasks.
 | `query` | string | Indirect application query |
 | `provenance` | object | Build origin and optional knowledge-source trace |
 
-The bilingual file moves all language-dependent fields under `en` and `zh`. Shared fields (`task_id`, `domain`, `legacy_type`, and `provenance`) remain at the top level.
+The bilingual file moves all language-dependent fields under `en` and `zh`. Shared fields (`task_id`, `domain`, and `provenance`) remain at the top level.
 
 ## Stable identifiers
 
@@ -68,7 +66,7 @@ Current coverage:
 | --- | ---: |
 | Attached source URL | 77 |
 | Human-expert task with no attached URL | 12 |
-| Legacy task with no attached knowledge-source record | 36 |
+| Task retained from the original 90-task set with no attached knowledge-source record | 36 |
 
 Missing source metadata is represented by the absence of `knowledge_source`; it must not be interpreted as evidence that no external bridge exists. Completing and independently checking these traces is part of the archival-release roadmap.
 
@@ -102,4 +100,3 @@ On macOS, use `shasum -a 256` to recompute hashes if `sha256sum` is unavailable.
 All personal facts and dialogues are synthetic. The benchmark includes sensitive scenarios solely to evaluate whether an agent applies remembered constraints. Dataset text should not be presented to users as professional advice.
 
 License information will be added before the formal archival release.
-
