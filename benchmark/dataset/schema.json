@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/imlrz/InMind/main/benchmark/dataset/schema_en.json",
-  "title": "InMind English task",
+  "$id": "https://raw.githubusercontent.com/imlrz/InMind/main/benchmark/dataset/schema.json",
+  "title": "InMind task",
   "type": "object",
   "additionalProperties": false,
   "required": [
