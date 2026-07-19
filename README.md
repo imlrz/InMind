@@ -5,11 +5,6 @@
 </p>
 
 <p align="center">
-  <img alt="Tasks: 125" src="https://img.shields.io/badge/tasks-125-4c78a8">
-  <img alt="Domains: 10" src="https://img.shields.io/badge/domains-10-59a14f">
-  <img alt="Language: English" src="https://img.shields.io/badge/language-English-f28e2b">
-  <img alt="Format: JSONL" src="https://img.shields.io/badge/format-JSONL-9c755f">
-  <br>
   <a href="https://keep-it-inmind.github.io/"><img alt="Website" src="https://img.shields.io/badge/website-project_page-4c78a8"></a>
   <a href="benchmark/dataset/inmind.jsonl"><img alt="Dataset" src="https://img.shields.io/badge/dataset-download-59a14f"></a>
   <a href="https://keep-it-inmind.github.io/leaderboard/"><img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-view-f28e2b"></a>
