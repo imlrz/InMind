@@ -9,18 +9,12 @@
   <img alt="Domains: 10" src="https://img.shields.io/badge/domains-10-59a14f">
   <img alt="Language: English" src="https://img.shields.io/badge/language-English-f28e2b">
   <img alt="Format: JSONL" src="https://img.shields.io/badge/format-JSONL-9c755f">
+  <br>
+  <a href="https://keep-it-inmind.github.io/"><img alt="Website" src="https://img.shields.io/badge/website-project_page-4c78a8"></a>
+  <a href="benchmark/dataset/inmind.jsonl"><img alt="Dataset" src="https://img.shields.io/badge/dataset-download-59a14f"></a>
+  <a href="https://keep-it-inmind.github.io/leaderboard/"><img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-view-f28e2b"></a>
+  <img alt="Paper: Coming soon" src="https://img.shields.io/badge/paper-coming_soon-9c755f">
 </p>
-
-<p align="center">
-  <a href="benchmark/dataset/inmind.jsonl">Dataset</a> ·
-  <a href="benchmark/README.md">Benchmark design</a> ·
-  <a href="benchmark/dataset/README.md">Dataset card</a> ·
-  <a href="benchmark/dataset/schema.json">Schema</a>
-</p>
-
-> Most memory benchmarks ask: **Can the agent remember?**
->
-> InMind asks: **Does the agent know when that memory matters?**
 
 InMind is a 125-task benchmark for evaluating whether long-term-memory agents can apply a previously stated user fact when the later query is connected to that fact only through world knowledge. It targets the **implicit-association blind spot**: a memory can be essential to a query without looking similar to it.
 
@@ -129,11 +123,11 @@ InMind/
 
 ## Paper
 
-The benchmark accompanies the manuscript:
+**Coming soon.** The benchmark accompanies the manuscript:
 
 > **Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory**
 
-The manuscript formalizes the retrieval hypothesis behind query-conditioned memory, introduces InMind's paired diagnostic controls, and evaluates representative vector, graph, agentic, and hybrid memory systems. The paper PDF, citation metadata, evaluation code, and paper-aligned results will be added after the release artifacts are frozen.
+The manuscript formalizes the retrieval hypothesis behind query-conditioned memory, introduces InMind's paired diagnostic controls, and evaluates representative vector, graph, agentic, and hybrid memory systems.
 
 ## Responsible use
 
