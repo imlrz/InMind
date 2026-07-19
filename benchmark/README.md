@@ -72,13 +72,13 @@ An answer-level judge checks whether the final response applies the expected bri
 
 ## Why similarity is not enough
 
-In common memory benchmarks, target memories tend to be more similar to the query than background memories. InMind is constructed to suppress that signal: the target-memory and background distributions substantially overlap under an independently selected embedding model.
+In common memory benchmarks, target memories tend to be more similar to the query than background memories. InMind is constructed to suppress that signal: under `all-MiniLM-L6-v2`, the target-memory and background distributions substantially overlap.
 
 <p align="center">
-  <img src="../assets/similarity_comparison.png" width="100%" alt="BGE-small-en-v1.5 target and background similarity distributions for LoCoMo, LoCoMo-Plus, LME-s turn, and InMind.">
+  <img src="../assets/similarity_comparison.png" width="100%" alt="all-MiniLM-L6-v2 target and background similarity distributions for LoCoMo, LoCoMo-Plus, LME-s turn, and InMind.">
 </p>
 
-<p align="center"><em>Target/gold memories are orange; noise/background memories are blue. InMind deliberately reduces target–background separation.</em></p>
+<p align="center"><em>Cosine similarity under all-MiniLM-L6-v2. Target/gold memories are orange; noise/background memories are blue. InMind deliberately reduces target–background separation.</em></p>
 
 The figure is a diagnostic, not a claim that every possible retriever must fail. A sufficiently expensive world-model-based relevance function could discover the bridge, but it would no longer be ordinary similarity retrieval. InMind measures how current memory interfaces behave in this gap.
 
