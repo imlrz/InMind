@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://keep-it-inmind.github.io/schema/submission.schema.json",
+  "title": "InMind per-task system output",
+  "type": "object",
+  "required": ["task_id", "system", "config", "naive", "query"],
+  "properties": {
+    "task_id": {
+      "type": "integer"
+    },
+    "system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "config": {
+      "type": "object"
+    },
+    "naive": {
+      "$ref": "#/$defs/evaluationTurn"
+    },
+    "query": {
+      "$ref": "#/$defs/evaluationTurn"
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "evaluationTurn": {
+      "type": "object",
+      "required": ["context", "answer"],
+      "properties": {
+        "context": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
