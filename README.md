@@ -4,7 +4,7 @@
   <a href="https://keep-it-inmind.github.io/"><img alt="Website" src="https://img.shields.io/badge/website-project_page-4c78a8"></a>
   <a href="benchmark/dataset/inmind.jsonl"><img alt="Dataset" src="https://img.shields.io/badge/dataset-download-59a14f"></a>
   <a href="https://keep-it-inmind.github.io/leaderboard/"><img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-view-f28e2b"></a>
-  <img alt="Paper: Coming soon" src="https://img.shields.io/badge/paper-coming_soon-9c755f">
+  <a href="https://arxiv.org/abs/2607.24368"><img alt="Paper" src="https://img.shields.io/badge/paper-arXiv%3A2607.24368-b31b1b"></a>
 </p>
 
 InMind is a 125-task benchmark for evaluating whether long-term-memory agents can apply a previously stated user fact when the later query is connected to that fact only through world knowledge. It targets the **implicit-association blind spot**: a memory can be essential to a query without looking similar to it.
@@ -114,9 +114,11 @@ InMind/
 
 ## Paper
 
-**Coming soon.** The benchmark accompanies the manuscript:
+The paper is available on arXiv:
 
 > **Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory**
+
+[Abstract](https://arxiv.org/abs/2607.24368) · [PDF](https://arxiv.org/pdf/2607.24368)
 
 The manuscript formalizes the retrieval hypothesis behind query-conditioned memory, introduces InMind's paired diagnostic controls, and evaluates representative vector, graph, agentic, and hybrid memory systems.
 
