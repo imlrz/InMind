@@ -97,19 +97,42 @@ print(by_id[155]["query"])
 
 Task IDs are intentionally sparse. Use `task_id` for joins; do not use it as a zero-based row index. See the [dataset card](benchmark/dataset/README.md) for complete field definitions, provenance coverage, validation, and safety notes.
 
+## Evaluate your system
+
+The repository includes the fixed LongMemEval-s background trace used in the paper, the canonical middle-injection procedure, answer and judge prompts, validation tools, and a submission schema. Start with the [evaluation guide](evaluation/README.md):
+
+```bash
+python evaluation/scripts/validate_release.py
+python evaluation/scripts/build_timeline.py \
+  --task-id 155 \
+  --output /tmp/inmind-task-155.json
+```
+
+The generated timeline places task 155's target user/assistant pair at the end of the ninth background session, followed by 38 complete sessions. The direct and indirect queries remain outside the stored timeline so they can be evaluated independently from the same frozen memory state.
+
+For coding agents, [`skills/evaluate-inmind/SKILL.md`](skills/evaluate-inmind/SKILL.md) provides an executable integration checklist. Give the skill directory to an agent and ask it to evaluate a memory system on InMind.
+
 ## Repository layout
 
 ```text
 InMind/
 ├── README.md
 ├── assets/                    # Paper figures used in the documentation
-└── benchmark/
-    ├── README.md              # Benchmark motivation and protocol
-    └── dataset/
-        ├── README.md          # Dataset card
-        ├── inmind.jsonl       # 125 English tasks
-        ├── schema.json        # JSON Schema for one task
-        └── SHA256SUMS         # Dataset integrity checksum
+├── benchmark/
+│   ├── README.md              # Benchmark motivation and protocol
+│   └── dataset/
+│       ├── README.md          # Dataset card
+│       ├── inmind.jsonl       # 125 English tasks
+│       ├── schema.json        # JSON Schema for one task
+│       └── SHA256SUMS         # Dataset integrity checksum
+├── evaluation/
+│   ├── README.md              # Reproducible evaluation protocol
+│   ├── background/            # Fixed LME-s trace, manifest, and license
+│   ├── prompts/               # Answer and binary-judge prompts
+│   ├── schema/                # Result-submission contract
+│   └── scripts/               # Timeline, validation, and judging helpers
+└── skills/
+    └── evaluate-inmind/       # Agent-readable benchmark integration skill
 ```
 
 ## Paper
@@ -133,7 +156,8 @@ The benchmark is intentionally diagnostic and relatively small. Small percentage
 - [x] Benchmark definition
 - [x] English dataset and JSON Schema
 - [x] Dataset card and integrity checksum
-- [ ] Evaluation package and judge prompts
+- [x] Fixed LME-s background and middle-injection tooling
+- [x] Evaluation package, judge prompts, and agent skill
 - [ ] Baseline adapters and pinned dependency versions
 - [ ] Paper-aligned aggregate and per-task results
 - [ ] Citation metadata, license, and archival release

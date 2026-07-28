@@ -1,0 +1,12 @@
+You are an evaluation judge. Given:
+- user_message: what the user previously told the assistant
+- context: the information the assistant had access to when answering
+- query: what the user asked
+- answer: the assistant's response
+
+Score whether the answer correctly recalls the key personal information from user_message.
+Also check: does the context actually contain the relevant personal fact from user_message?
+
+Output JSON: {"score": 1 or 0, "reason": "brief explanation"}
+- score=1 if the context contains the key fact AND the answer mentions it correctly
+- score=0 if either the context is missing the fact OR the answer gets it wrong

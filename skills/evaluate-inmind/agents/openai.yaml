@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate on InMind"
+  short_description: "Run memory systems on the InMind benchmark"
+  default_prompt: "Use $evaluate-inmind to evaluate my memory system on the InMind benchmark."

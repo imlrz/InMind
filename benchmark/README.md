@@ -136,3 +136,7 @@ It is not intended as a knowledge base, a source of professional advice, or a st
 - Results can depend on the answer model, judge model, prompt, memory-write policy, retrieval budget, and injection timeline; these must be reported together.
 
 See the [dataset card](dataset/README.md) for file format, provenance coverage, and safety notes.
+
+## Run the benchmark
+
+Use the repository's [evaluation package](../evaluation/README.md) for the fixed LME-s background, canonical target-injection timeline, answer and judge prompts, result schema, and validation scripts. Coding agents can follow the [`evaluate-inmind` skill](../skills/evaluate-inmind/SKILL.md).

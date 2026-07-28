@@ -1,0 +1,25 @@
+{
+  "name": "InMind fixed LME-s background trace",
+  "file": "lme_s_background.jsonl",
+  "sha256": "aef51e8a4e606a3ac5ceafdc64d875a7f1f41a051dafd68dce45f9c90d626da1",
+  "turns": 486,
+  "sessions": 47,
+  "user_turns": 240,
+  "assistant_turns": 246,
+  "injection_session_index": 8,
+  "injection_session_number": 9,
+  "phase_a_sessions": 8,
+  "prefix_user_turns": 35,
+  "injection_user_turn_locator": 40,
+  "background_user_turns_before_target": 41,
+  "post_injection_sessions": 38,
+  "source": {
+    "project": "LongMemEval",
+    "repository": "https://github.com/xiaowu0162/LongMemEval",
+    "paper": "https://arxiv.org/abs/2410.10813",
+    "dataset": "longmemeval_s_cleaned.json",
+    "question_id": "0bc8ad93",
+    "upstream_commit": "9e0b455f4ef0e2ab8f2e582289761153549043fc",
+    "license": "MIT"
+  }
+}
