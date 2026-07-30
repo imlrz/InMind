@@ -117,6 +117,8 @@ For coding agents, [`skills/evaluate-inmind/SKILL.md`](skills/evaluate-inmind/SK
 ```text
 InMind/
 ├── README.md
+├── CITATION.bib               # Ready-to-use BibTeX citation
+├── CITATION.cff               # GitHub-readable citation metadata
 ├── assets/                    # Paper figures used in the documentation
 ├── benchmark/
 │   ├── README.md              # Benchmark motivation and protocol
@@ -140,10 +142,29 @@ InMind/
 The paper is available on arXiv:
 
 > **Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory**
+>
+> Ruizhe Li, Mingxuan Du, Benfeng Xu, and Zhendong Mao
 
-[Abstract](https://arxiv.org/abs/2607.24368) · [PDF](https://arxiv.org/pdf/2607.24368)
+[Abstract](https://arxiv.org/abs/2607.24368) · [PDF](https://arxiv.org/pdf/2607.24368) · [DOI](https://doi.org/10.48550/arXiv.2607.24368)
 
 The manuscript formalizes the retrieval hypothesis behind query-conditioned memory, introduces InMind's paired diagnostic controls, and evaluates representative vector, graph, agentic, and hybrid memory systems.
+
+## Citation
+
+If you use InMind in your research, please cite:
+
+```bibtex
+@article{li2026keepinmind,
+  title   = {Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory},
+  author  = {Li, Ruizhe and Du, Mingxuan and Xu, Benfeng and Mao, Zhendong},
+  journal = {arXiv preprint arXiv:2607.24368},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2607.24368},
+  url     = {https://arxiv.org/abs/2607.24368}
+}
+```
+
+The same metadata is available as [`CITATION.cff`](CITATION.cff) and [`CITATION.bib`](CITATION.bib).
 
 ## Responsible use
 
@@ -158,6 +179,7 @@ The benchmark is intentionally diagnostic and relatively small. Small percentage
 - [x] Dataset card and integrity checksum
 - [x] Fixed LME-s background and middle-injection tooling
 - [x] Evaluation package, judge prompts, and agent skill
+- [x] Citation metadata
 - [ ] Baseline adapters and pinned dependency versions
 - [ ] Paper-aligned aggregate and per-task results
-- [ ] Citation metadata, license, and archival release
+- [ ] Repository license and archival release
