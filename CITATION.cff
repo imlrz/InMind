@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use InMind in your research, please cite the paper below."
+title: "Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory"
+type: dataset
+authors:
+  - family-names: Li
+    given-names: Ruizhe
+  - family-names: Du
+    given-names: Mingxuan
+  - family-names: Xu
+    given-names: Benfeng
+  - family-names: Mao
+    given-names: Zhendong
+repository-code: "https://github.com/imlrz/InMind"
+url: "https://keep-it-inmind.github.io/"
+date-released: 2026-07-27
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Li
+      given-names: Ruizhe
+    - family-names: Du
+      given-names: Mingxuan
+    - family-names: Xu
+      given-names: Benfeng
+    - family-names: Mao
+      given-names: Zhendong
+  title: "Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory"
+  journal: "arXiv preprint arXiv:2607.24368"
+  year: 2026
+  doi: "10.48550/arXiv.2607.24368"
+  url: "https://arxiv.org/abs/2607.24368"
